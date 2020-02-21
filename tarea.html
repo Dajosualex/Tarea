@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Basic Web Page</title>
+    </head>
+    <body>
+                    
+<h1>Tarea</h1>
+<p id="tarea"></p>
+        <script>
+ //objeto 1           
+var xilofono = {
+  teclas: 12,
+  nota1 : "Do",
+  nota2:"re",
+  nota3:"mi",
+  nota4:"fa",
+  teclaActual     : 5,
+  
+  
+
+  notes : function() {
+    return this.teclas + " son las notas totales."+"\n"+ "nota elegida " + this.teclaActual+" la siguiente nota es: ";
+  },
+  nextNote: function() {
+      return this.teclaActual+1+" ";
+  },
+ 
+};
+//objeto 2
+var telefono=  {
+alto: 15,
+ancho:7,
+marca:"LG",
+camaraDelantera: 16,
+camaraTrasera:32,
+
+datos: function(){
+    document.write("\n");
+    return this.marca+" es la marca del teléfono ";
+},
+specs: function(){
+    return this.camaraDelantera + " megapíxeles de camara delantera y " + this.camaraTrasera + " megapixeles de cámara trasera";
+},
+
+};
+
+//objeto 3
+var zapato=  {
+Talla: 25,
+color:"rojo",
+marca:"NIKE",
+Tipo: "deportivo",
+numereModelo:32,
+inicio:" zapato tipo ",
+datos: function () {
+    
+    return this.inicio+this.Tipo+" de marca "+ this.marca + " talla "+ this.Talla+" modelo "+this.numereModelo;
+},
+caracteristicas: function(){
+return " color: "+this.color+" talla: "+ this.Talla;
+}
+};
+//objeto 4
+var refrigerador= {
+altura:2,
+ancho:1.2,
+capacidad: 13,
+marca:  "hisense",
+detalle: "expendedor de hielo",
+
+medidasR: function(){
+return " Refrigerador de "+this.altura+"m de altura, "+this.ancho+"m de ancho y una capacidad de: "+ this.capacidad+" pies";
+},
+
+detalles: function(){
+    return " Marca: "+ this.marca+" con "+this.detalle;
+}
+
+};
+//objeto 5
+var television={
+pulgadas: 40,
+brand: "SONY",
+resolutionY:1920,
+resolutionX:1080,
+type:"LCD",
+
+medidasT: function(){
+return " Televisor de "+this.pulgadas+" pulgadas, resolucion de "+ this.resolutionY+"x"+this.resolutionX;
+},
+TvType: function(){
+    return " marca "+this.brand+" tipo "+this.type;
+}
+};
+
+
+document.getElementById("tarea").innerHTML = xilofono.notes()+xilofono.nextNote()+telefono.datos()+telefono.specs()+zapato.datos()+zapato.caracteristicas()+refrigerador.medidasR()+refrigerador.detalles()+television.medidasT()+television.TvType();
+        
+            </script>
+
+
+    </body>
+</html>
